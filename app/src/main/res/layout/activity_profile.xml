@@ -118,5 +118,44 @@
             android:textSize="14dp"
             android:id="@+id/textView2"
             app:layout_constraintTop_toBottomOf="@+id/user_info" app:layout_constraintStart_toStartOf="@+id/user_info"
-            android:layout_marginTop="16dp"/>
+            android:layout_marginTop="16dp"
+    />
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="company"
+            android:textSize="14dp"
+            android:id="@+id/companyName"
+            app:layout_constraintStart_toEndOf="@+id/repositoryName"
+            app:layout_constraintTop_toTopOf="@+id/repositoryName" android:layout_marginStart="60dp"/>
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Repository"
+            android:textSize="14dp"
+            android:layout_marginTop="16dp"
+            android:id="@+id/repositoryName"
+            app:layout_constraintTop_toBottomOf="@+id/following"
+            app:layout_constraintStart_toStartOf="@+id/fontTextView"
+    />
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="102"
+            android:textSize="14dp"
+            android:layout_marginTop="13dp"
+            android:id="@+id/repositoryvalue"
+            app:layout_constraintTop_toBottomOf="@+id/repositoryName"
+            app:layout_constraintStart_toStartOf="@+id/repositoryName"
+    />
+
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="Google"
+            android:textSize="14dp"
+            android:id="@+id/companyValue"
+            app:layout_constraintTop_toTopOf="@+id/repositoryvalue"
+            app:layout_constraintStart_toStartOf="@+id/companyName"
+    />
 </androidx.constraintlayout.widget.ConstraintLayout>

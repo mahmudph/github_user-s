@@ -35,5 +35,7 @@ class ProfileActivity : AppCompatActivity() {
         binding.follower.text = user.follower.toString()
         binding.following.text = user!!.following.toString()
         binding.imgItemPhoto.setImageResource(getImage(user.avatar))
+        binding.companyValue.text = user.company
+        binding.repositoryvalue.text = user.repository.toString()
     }
 }
