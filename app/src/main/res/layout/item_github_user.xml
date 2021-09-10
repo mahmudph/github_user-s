@@ -19,9 +19,10 @@
     <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:orientation="vertical"
+    >
         <TextView
-                android:id="@+id/username"
+                android:id="@+id/name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="8dp"
@@ -37,6 +38,7 @@
             <info.androidhive.fontawesome.FontTextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:textColor="@color/black_opacity"
                     app:solid_icon="true"
                     android:text="@string/fa_map"
             />
@@ -57,6 +59,7 @@
             <info.androidhive.fontawesome.FontTextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:textColor="@color/black_opacity"
                     app:solid_icon="true"
                     android:text="@string/fa_user_friends_solid"
             />
@@ -65,12 +68,13 @@
                     android:paddingLeft="15dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    tools:text="200"
+                    tools:text="200 following"
             />
             <info.androidhive.fontawesome.FontTextView
                     android:layout_marginLeft="20dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:textColor="@color/black_opacity"
                     app:solid_icon="true"
                     android:text="@string/fa_user_check_solid"
             />
@@ -79,7 +83,7 @@
                     android:paddingLeft="15dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    tools:text="20"
+                    tools:text="20 followers"
             />
         </LinearLayout>
     </LinearLayout>

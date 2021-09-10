@@ -30,11 +30,9 @@ class MainActivity : AppCompatActivity() {
 
         githubUsersList.setHasFixedSize(true)
 
-        GlobalScope.launch {
-            var jsonText = GeneralUtils.readJsonFile(applicationContext)
-            githubUsers = GeneralUtils.parsingJsonFile(jsonText)
-            showGithubUsersLists()
-        }
+        var jsonText = GeneralUtils.readJsonFile(applicationContext)
+        githubUsers = GeneralUtils.parsingJsonFile(jsonText)
+        showGithubUsersLists()
     }
 
     private fun showGithubUsersLists() {

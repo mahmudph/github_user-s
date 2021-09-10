@@ -32,10 +32,10 @@ class GithubUserListAdapter(val githubUsers: GithubUsers):
         }
         fun bind(data: User) {
             with(binding) {
-                username.text = data.username?.uppercase()
+                name.text = data.name
                 location.text = data.location
-                following.text = "${data.following}"
-                folower.text = "${data.follower}"
+                following.text = "${data.following} following"
+                folower.text = "${data.follower} followers"
                 Glide.with(itemView.context)
                     .load(getImage(data.avatar))
                     .apply(RequestOptions().override(55,55))

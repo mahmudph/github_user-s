@@ -15,7 +15,7 @@ class ProfileActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityProfileBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        supportActionBar?.title = "Detai User"
+        supportActionBar?.title = "Detail User"
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         getFromParcelData()
     }
@@ -30,7 +30,8 @@ class ProfileActivity : AppCompatActivity() {
 
     private fun getFromParcelData() {
         var user = intent.getParcelableExtra<User>(TAG)!!
-        binding.nameUser.text = "${user!!.username?.get(0)!!.toUpperCase()}${user!!.username!!.substring(2)}"
+        binding.username.text = "${user!!.username}"
+        binding.nameUser.text = user.name
         binding.userLocation.text = user!!.location
         binding.follower.text = user.follower.toString()
         binding.following.text = user!!.following.toString()
