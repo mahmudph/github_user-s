@@ -15,7 +15,6 @@ class GithubUserListAdapter(val githubUsers: GithubUsers):
     private lateinit var onClickItem: OnClickItemCallback
 
     companion object {
-        private const val TAG = "GithubUserListAdapter"
     }
 
     interface OnClickItemCallback {

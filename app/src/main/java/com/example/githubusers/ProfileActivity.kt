@@ -29,12 +29,12 @@ class ProfileActivity : AppCompatActivity() {
     }
 
     private fun getFromParcelData() {
-        var user = intent.getParcelableExtra<User>(TAG)!!
-        binding.username.text = "${user!!.username}"
+        val user = intent.getParcelableExtra<User>(TAG)!!
+        binding.username.text = "${user.username}"
         binding.nameUser.text = user.name
-        binding.userLocation.text = user!!.location
+        binding.userLocation.text = user.location
         binding.follower.text = user.follower.toString()
-        binding.following.text = user!!.following.toString()
+        binding.following.text = user.following.toString()
         binding.imgItemPhoto.setImageResource(getImage(user.avatar))
         binding.companyValue.text = user.company
         binding.repositoryvalue.text = user.repository.toString()

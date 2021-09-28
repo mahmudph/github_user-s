@@ -6,7 +6,7 @@ import com.google.gson.Gson
 
 object GeneralUtils {
     fun readJsonFile(context: Context): String {
-        var fileName = "githubuser.json"
+        val fileName = "githubuser.json"
         return context.assets.open(fileName).bufferedReader().use { it.readText() }
     }
     fun parsingJsonFile(jsonText: String): GithubUsers {

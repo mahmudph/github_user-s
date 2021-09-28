@@ -10,7 +10,7 @@ import android.view.WindowManager
 class SplashScreen : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        var splashScreenBinding = ActivitySplashScreenBinding.inflate(layoutInflater)
+        val splashScreenBinding = ActivitySplashScreenBinding.inflate(layoutInflater)
         setContentView(splashScreenBinding.root)
 
         window.setFlags(

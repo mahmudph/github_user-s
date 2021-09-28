@@ -10,8 +10,6 @@ import com.example.githubusers.databinding.ActivityMainBinding
 import com.example.githubusers.model.GithubUsers
 import com.example.githubusers.model.User
 import com.example.githubusers.utils.GeneralUtils
-import kotlinx.coroutines.GlobalScope
-import kotlinx.coroutines.launch
 
 class MainActivity : AppCompatActivity() {
     private lateinit var activityBinding: ActivityMainBinding
@@ -30,7 +28,7 @@ class MainActivity : AppCompatActivity() {
 
         githubUsersList.setHasFixedSize(true)
 
-        var jsonText = GeneralUtils.readJsonFile(applicationContext)
+        val jsonText = GeneralUtils.readJsonFile(applicationContext)
         githubUsers = GeneralUtils.parsingJsonFile(jsonText)
         showGithubUsersLists()
     }
@@ -40,7 +38,7 @@ class MainActivity : AppCompatActivity() {
         val listGithubUsers = GithubUserListAdapter(githubUsers)
         githubUsersList.adapter = listGithubUsers
 
-        listGithubUsers.setOnClickCallback(object: GithubUserListAdapter.OnClickItemCallback {
+        listGithubUsers.setOnClickCallback(object : GithubUserListAdapter.OnClickItemCallback {
             override fun onItemClicked(data: User) {
                 navigateToDetailUser(data)
             }
